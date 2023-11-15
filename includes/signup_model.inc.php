@@ -23,4 +23,19 @@ function get_email(object $pdo , string $email)
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     return $result;
 };
+
+function check_signup_errors()
+{
+    if(isset($_SESSION["errors_signup"]))
+    {
+        $errors = $_SESSION["errors_signup"];
+
+        echo "<br>";
+        foreach($errors as $error)
+        {
+            echo '<p class="form-error">'. $error .'</p>';
+        }
+        unset($_SESSION["errors_signup"]);
+    }
+}; 
 ?>
