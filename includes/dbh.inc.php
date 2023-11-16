@@ -1,7 +1,7 @@
 <?php
 
 $host = "localhost";
-$dbname = "myFirstSQLdatabase";
+$dbname = "loger";
 $dbUsername = "root";
 $dbPassword = "";
 

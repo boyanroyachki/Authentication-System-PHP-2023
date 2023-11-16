@@ -1,6 +1,7 @@
 <?php
 require_once 'includes/config_session.inc.php';
 require_once 'includes/signup_view.inc.php';
+require_once 'includes/signup_model.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +35,9 @@ require_once 'includes/signup_view.inc.php';
     </form>
 
     <?php
-    check_signup_errors(); 
+        check_signup_errors(); 
     ?>
+
+<script src="js/main.js"></script>
 </body>
 </html>

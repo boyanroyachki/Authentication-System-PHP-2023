@@ -47,6 +47,19 @@ button:hover {
     opacity: 0.8;
 }
 
+.form-error {
+    color: #721c24; /* Darker shade for text */
+    background-color: #f8d7da; /* Light background */
+    border: 1px solid #f5c6cb; /* Subtle border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px; /* Padding around text */
+    margin-bottom: 10px; /* Margin at the bottom */
+    opacity: 1; /* Start fully visible */
+    transition: opacity 0.5s linear; /* Smooth transition for fading out */
+    font-size: 14px; /* Font size */
+    text-align: center; /* Center align text */
+}
+
 /* Optional: Add some spacing and styling for small screen sizes */
 @media screen and (max-width: 600px) {
     form {
