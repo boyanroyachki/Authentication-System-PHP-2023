@@ -28,9 +28,7 @@ require_once 'includes/signup_model.inc.php';
     <h3>Sign up</h3>
 
     <form action="includes/signup.inc.php" method="post">
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="pwd" placeholder="Password">
-        <input type="text" name="email" placeholder="E-mail">
+        <?php signup_input();?>
         <button>Sign up</button>
     </form>
 

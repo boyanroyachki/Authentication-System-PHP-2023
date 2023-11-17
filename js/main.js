@@ -1,6 +1,6 @@
 window.onload = function() {
     // Select all elements with the class 'form-error'
-    var errorElements = document.querySelectorAll('.form-error');
+    let errorElements = document.querySelectorAll('.form-error');
 
     if (errorElements.length > 0) {
         // Scroll to the first error message

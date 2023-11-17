@@ -24,18 +24,18 @@ function get_email(object $pdo , string $email)
     return $result;
 };
 
-function check_signup_errors()
+ 
+function set_user(object $pdo, string $username, string $pwd, string $email)
 {
-    if(isset($_SESSION["errors_signup"]))
-    {
-        $errors = $_SESSION["errors_signup"];
+    $query = "INSERT INTO users (username, pwd, email) VALUES(:username, :pwd, :email);";
+    $stmt = $pdo->prepare($query); //sql injection prevention
 
-        echo "<br>";
-        foreach($errors as $error)
-        {
-            echo '<p class="form-error">'. $error .'</p>';
-        }
-        unset($_SESSION["errors_signup"]);
-    }
-}; 
+
+    $options = ['cost' => 12];
+    $hashed_pwd = password_hash($pwd, PASSWORD_BCRYPT, $options);
+    $stmt->bindParam(":username", $username);
+    $stmt->bindParam(":pwd", $hashed_pwd);
+    $stmt->bindParam(":email", $email);
+    $stmt->execute();
+};
 ?>
