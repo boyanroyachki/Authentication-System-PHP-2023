@@ -1,15 +1,17 @@
 /* main.css */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    /* background-color: #f4f4f4;
+    color: #333; */
+    background-color: #333;
+    color: #ffffff;
     line-height: 1.6;
     padding: 20px;
 }
 
 h3, h6 {
     text-align: center;
-    color: #333;
+    color: #ffffff;
 }
 
 form {
