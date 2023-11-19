@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
         //handlers
         $errors = [];
 
-        if(is_input_empty($username, $password, $email))
+        if(is_input_empty($username, $password))
         {
             $errors["empty_input"] = "Fill in all fields!";
         }
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
         {
           $errors["login_incorrect"] = "Incorrect login info!";  
         }
-        if (!is_username_wrong($result) && is_password_wrong($pwd, $result["pwd"])) 
+        if (!is_username_wrong($result) && is_password_wrong($password, $result["pwd"])) 
         {
             $errors["login_incorrect"] = "Incorrect login info!"; 
         }
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
 
         if($errors) //returns true if it has data inside, false, if not.
         {
-            $_SESSION["errors_signup"] = $errors;
+            $_SESSION["errors_login"] = $errors;
             
             header("Location: ../index.php");
             die();

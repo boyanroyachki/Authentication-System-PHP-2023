@@ -21,3 +21,5 @@ window.onload = function() {
         }, 3500); // Make sure this is slightly longer than the fade-out duration
     });
 };
+
+
