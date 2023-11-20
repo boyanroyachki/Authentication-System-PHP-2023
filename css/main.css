@@ -1,20 +1,21 @@
 /* main.css */
-body {
+body 
+{
     font-family: 'Arial', sans-serif;
-    /* background-color: #f4f4f4;
-    color: #333; */
     background-color: #333;
     color: #ffffff;
     line-height: 1.6;
     padding: 20px;
 }
 
-h3, h6 {
+h3, h6 
+{
     text-align: center;
     color: #ffffff;
 }
 
-form {
+form 
+{
     background: #fff;
     padding: 20px;
     margin: 20px auto;
@@ -24,7 +25,8 @@ form {
 }
 
 input[type="text"], 
-input[type="password"] {
+input[type="password"] 
+{
     width: 100%;
     padding: 10px;
     margin: 8px 0;
@@ -34,7 +36,8 @@ input[type="password"] {
     border-radius: 4px;
 }
 
-button {
+button 
+{
     background-color: #210759;
     color: white;
     padding: 14px 20px;
@@ -45,39 +48,44 @@ button {
     border-radius: 4px;
 }
 
-button:hover {
+button:hover 
+{
     opacity: 0.8;
 }
 
-.form-error {
-    color: #721c24; /* Darker shade for text */
-    background-color: #f8d7da; /* Light background */
-    border: 1px solid #f5c6cb; /* Subtle border */
-    border-radius: 4px; /* Rounded corners */
-    padding: 10px; /* Padding around text */
-    margin-bottom: 10px; /* Margin at the bottom */
-    opacity: 1; /* Start fully visible */
-    transition: opacity 0.5s linear; /* Smooth transition for fading out */
-    font-size: 14px; /* Font size */
-    text-align: center; /* Center align text */
+.form-error
+ {
+    color: #721c24; 
+    background-color: #f8d7da; 
+    border: 1px solid #f5c6cb; 
+    border-radius: 4px; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    opacity: 1; 
+    transition: opacity 0.5s linear; 
+    font-size: 14px; 
+    text-align: center; 
 }
 
-.form-success {
-    color: #155724; /* Dark green color for text */
-    background-color: #d4edda; /* Light green background */
-    border: 1px solid #c3e6cb; /* Subtle green border */
-    border-radius: 4px; /* Rounded corners */
-    padding: 10px; /* Padding around the text */
-    margin-bottom: 10px; /* Margin below the message */
-    text-align: center; /* Center align the text */
-    font-size: 14px; /* Font size */
-    /* Add other styles as needed */
+.form-success 
+{
+    color: #155724; 
+    background-color: #d4edda; 
+    border: 1px solid #c3e6cb; 
+    border-radius: 4px; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    text-align: center; 
+    font-size: 14px; 
+    
 }
 
 
-/* Optional: Add some spacing and styling for small screen sizes */
-@media screen and (max-width: 600px) {
-    form {
+
+@media screen and (max-width: 600px) 
+{
+    form 
+    {
         width: 80%;
         margin: 10px auto;
     }
