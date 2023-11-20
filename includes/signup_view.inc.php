@@ -25,6 +25,7 @@ function signup_input()
 
 };
 
+
 function check_signup_errors()
 {
     if(isset($_SESSION["errors_signup"]))

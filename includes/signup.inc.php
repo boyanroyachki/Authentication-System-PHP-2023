@@ -18,6 +18,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
         {
             $errors["empty_input"] = "Fill in all fields!";
         }
+        else
+        {
+            if (strlen($username) > 20 || strlen($username) < 5) {
+                $errors["username_too_long_or_short"] = "The username should be between 5 and 20 characters";
+            }
+            if (!preg_match('/^[a-zA-Z0-9_]+$/', $username)) {  //Check for invalid characters
+                $errors["invalid_chars_in_username"] = "Username contains invalid characters. Only letters, numbers, and underscores are allowed.";
+            }
+        }
+
         if(is_email_invalid($email))
         {
             $errors["invalid_email"] = "Invalid email used!";
